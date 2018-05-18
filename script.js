@@ -50,22 +50,22 @@ class Stopwatch {
 	stop() {
 		this.running = false;
 		clearInterval(this.watch);
-		this.reset();
 	}
 
 	clear() {
+		this.reset();
 		this.print();
 	}
 
 }
 
 function pad0(value) {
-	    let result = value.toString();
-	    if (result.length < 2) {
-	        result = '0' + result;
-	    }
-	    return result;
-	}
+    let result = value.toString();
+    if (result.length < 2) {
+        result = '0' + result;
+    }
+    return result;
+}
 
 const stopwatch = new Stopwatch(document.querySelector('.stopwatch'));
 
